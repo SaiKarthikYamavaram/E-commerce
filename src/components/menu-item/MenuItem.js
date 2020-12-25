@@ -6,7 +6,7 @@ const MenuItem = ({
 	title,
 	subtitle = "SHOP NOW",
 	imageUrl,
-	size,
+	size="",
 	history,
 	linkUrl,
 	match,
