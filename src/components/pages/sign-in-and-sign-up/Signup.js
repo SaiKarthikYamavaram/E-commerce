@@ -30,7 +30,7 @@ export default class Signup extends React.Component {
 				email,
 				password
 			);
-			await createUserProfileDocument(user, {displayName});
+			await createUserProfileDocument(user, { displayName });
 
 			this.state = {
 				displayName: "",
@@ -44,7 +44,7 @@ export default class Signup extends React.Component {
 	};
 
 	handleChange = (event) => {
-        // event.preventDefault();
+		// event.preventDefault();
 		const { name, value } = event.target;
 		this.setState({ [name]: value });
 	};
@@ -78,6 +78,7 @@ export default class Signup extends React.Component {
 						value={password}
 						onChange={this.handleChange}
 						label='Password'
+						autoComplete='on'
 						required
 					/>
 					<FormInput
@@ -85,6 +86,7 @@ export default class Signup extends React.Component {
 						name='conformPassword'
 						value={conformPassword}
 						onChange={this.handleChange}
+						autoComplete='on'
 						label='Conform Password'
 						required
 					/>
